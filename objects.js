@@ -69,8 +69,8 @@ console.log(groupedProducts);
 //     { name: 'Jill', scores: [85, 90, 84] },
 //   ];
 
-function getTopStudents(students) {
-    const topStudents = [];
+function studentsScores(students) {
+    const winningStudents = [];
   
     for (const student of students) {
       const scores = student.scores;
@@ -83,11 +83,11 @@ function getTopStudents(students) {
       const average = sum / scores.length;
   
       if (average >= 85) {
-        topStudents.push(student.name);
+        winningStudents.push(student.name);
       }
     }
   
-    return topStudents;
+    return winningStudents;
   }
   
   const students = [
@@ -97,8 +97,8 @@ function getTopStudents(students) {
     { name: 'Jill', scores: [85, 90, 84] },
   ];
   
-  const topStudents = getTopStudents(students);
-  console.log(topStudents); 
+  const winningStudents= studentsScores(students);
+  console.log(winningStudents); 
   
 
 
